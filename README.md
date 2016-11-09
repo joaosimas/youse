@@ -23,10 +23,13 @@ bundle exec chromedriver-update
 -----
 
 Para rodar o projeto inteiro, entrar no diretório youse e rodar o comando 
+
 cucumber
 
 Caso queira rodar apenas o arquivo de login:
+
 cucumber --require features features/specifications/login.feature
 
 Caso queira rodar apenas o arquivo de cadastro:
+
 cucumber --require features features/specifications/cadastro.feature
