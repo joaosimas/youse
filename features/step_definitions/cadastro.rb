@@ -43,4 +43,5 @@
  Então(/^clicar em enviar cadastro$/) do
  	click_on 'enviar cadastro'
  	expect(page).to have_content('Ops, você ainda não tem nenhum seguro Youse. =(')
+ 	puts 'Cadastro enviado com sucesso'
  end

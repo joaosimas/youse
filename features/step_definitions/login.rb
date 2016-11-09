@@ -1,23 +1,18 @@
  # encoding: utf-8 (colocar o cerquilha antes)
  # !/usr/bin/env ruby (colocar o cerquilha antes)
-
- Dado(/^que eu acesse o site da youse$/) do
- 	visit 'https://youse.com.br'
+ Before do
+ 	include Capybara::DSL
  end
 
- Quando(/^eu clicar em minha conta$/) do
- 	click_link 'MINHA CONTA'
- end
-
- E(/^passar e-mail$/) do
- 	find(:id, 'user_email').set('youse@hilpert.net') 
+ E(/^preencher e-mail$/) do
+ 	find(:id, 'email').set('youse@hilpert.net') 
  end
 
  E(/^clicar em proximo passo$/) do
  	click_on 'próximo passo'
  end
 
- E(/^passar senha$/) do
+ E(/^preencher senha$/) do
  	find(:id, 'user_password').set('youse1!@3$') 
  end
 
@@ -26,5 +21,6 @@
  end
 
  Então(/^realizar acesso$/) do
+ 	expect(page).to have_content('Login efetuado com sucesso')
  	puts 'Logou'
  end
