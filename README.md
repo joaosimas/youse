@@ -20,8 +20,20 @@ sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
 
 bundle exec chromedriver-update
 
------
+-------
 
+Para o Firefox
+
+Baixar o geckdriver na versão do seu sistema operacional
+https://github.com/mozilla/geckodriver/releases
+
+Mover o GeckDriver desconpactado para /usr/bin
+
+Atualizar o driver
+sudo gem update selenium-webdriver
+
+
+-------
 Para rodar o projeto inteiro, entrar no diretório youse e rodar o comando 
 
 cucumber
