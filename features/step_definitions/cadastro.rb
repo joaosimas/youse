@@ -1,3 +1,4 @@
+ require 'pry'
  # encoding: utf-8 (colocar o cerquilha antes)
  # !/usr/bin/env ruby (colocar o cerquilha antes)
  Before do
@@ -15,9 +16,10 @@
  Quando(/^eu clicar em minha conta$/) do
  	click_link 'MINHA CONTA'
  end
-
+ 
  E(/^clicar em cadastre-se$/) do
- 	click_on 'Cadastre-se'
+ 	sleep 3
+ 	click_link 'Cadastre-se'
  end
 
  E(/^passar nome$/) do
