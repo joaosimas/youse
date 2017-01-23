@@ -9,7 +9,7 @@
  end
 
  Dado(/^que eu acesse o site da youse$/) do
- 	visit 'https://youse.com.br'
+ 	visit '/'
  end
 
  Quando(/^eu clicar em minha conta$/) do
